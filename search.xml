@@ -4,17 +4,36 @@
   
     
     <entry>
-      <title>致刘倩仪~~~~~~</title>
+      <title>刘傻子~~~~~~</title>
       <link href="/2019/05/20/520/"/>
       <url>/2019/05/20/520/</url>
       
-        <content type="html"><![CDATA[<p> 今天又是520了！！</p><p> 祝刘倩仪同学早日脱单哈~-~-~</p><p>哈哈哈哈</p><p>———–哆啦A梦</p>]]></content>
+        <content type="html"><![CDATA[<p> 今天是520了！！</p><p> 脱单了哈~-~-~</p><p>哈哈哈哈</p><p>———–哆啦A梦</p>]]></content>
       
       
       
         <tags>
             
             <tag> 心情 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>metaspolit基础</title>
+      <link href="/2019/05/20/metasploit/"/>
+      <url>/2019/05/20/metasploit/</url>
+      
+        <content type="html"><![CDATA[<p>metasploit的理解：他是一个工具框架·，需要接口连接使用。</p><p>metasploit使用：</p><pre><code>接入接口三个：终端，命令行，图形化界面    终端的打开：msfconsole    命令行：/opt/framework3/msf3    图形化界面：armitage</code></pre><p>功能程序（即metasploit的功能）：<br>    msf攻击载荷生成器，<br>    msf编码器<br>    nasm shell (找出Opcode操作码)</p><p>metasploit渗透测试步骤:<br>    信息收集：</p><pre><code> 被动搜集：（不接触目标系统下）whois查询：例如：查询dns信息，是否由内部提供netcraft:查询网站IPnslookup:获取更多附加信息  主动搜集：（用工具与目标系统对话）nmap:</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mataspolit 渗透测试 </tag>
             
         </tags>
       
