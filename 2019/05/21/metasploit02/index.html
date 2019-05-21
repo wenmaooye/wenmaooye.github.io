@@ -4,11 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="metaspolit������, 哆啦ui萌">
-    <meta name="description" content="metasploit���ڽ�ɨ������ʹ��search portscan �鿴���ж˿�ɨ�蹤��
-    ���ߵ�ʹ�ã�
-        ʵ�ڼǲ�ס��show optins,ϵͳ�ͻ��г�
-    �Ϲ�أ�    һ">
+    <meta name="keywords" content="metaspolit基础二, 哆啦ui萌">
+    <meta name="description" content="metasploit的内建扫描器：使用search portscan 查看所有端口扫描工具
+    工具的使用：
+        实在记不住查show optins,系统就会列出
+    老规矩：    一，选择使用的模块----use s">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>metaspolit������ | 哆啦ui萌</title>
+    <title>metaspolit基础二 | 哆啦ui萌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/source/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/source/medias/featureimages/1.jp')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        metaspolit������
+                        metaspolit基础二
                     </div>
                 </div>
             </div>
@@ -377,8 +377,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/mataspolit-��͸����/" target="_blank">
-                                <span class="chip bg-color">mataspolit ��͸����</span>
+                            <a href="/tags/mataspolit-渗透测试/" target="_blank">
+                                <span class="chip bg-color">mataspolit 渗透测试</span>
                             </a>
                         
                     </div>
@@ -399,7 +399,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        94
+                        373
                     </div>
                     
 
@@ -422,35 +422,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="metasploit���ڽ�i������"><a href="#metasploit���ڽ�i������" class="headerlink" title="metasploit���ڽ�ɨ������"></a>metasploit���ڽ�ɨ������</h3><pre><code>ʹ��search portscan �鿴���ж˿�ɨ�蹤��
-    ���ߵ�ʹ�ã�
-        ʵ�ڼǲ�ס��show optins,ϵͳ�ͻ��г�
-    �Ϲ�أ�    һ��ѡ��ʹ�õ�ģ��----use scannet/portscan/syn
-                 ��������Ŀ��������----set RHOSTS 192.168.1.1
-        ���������߳�----set THREADS 50
-        �ģ�����-----run
-</code></pre><p>back���л�����ģ��</p>
-<h3 id="��������Ϣ��Э��i�裺"><a href="#��������Ϣ��Э��i�裺" class="headerlink" title="��������Ϣ��Э��ɨ�裺"></a>��������Ϣ��Э��ɨ�裺</h3><pre><code>���ã��������磬����window����ϵͳ�汾��
-</code></pre><p>   ��ʹ��Samba����linux,��window�����ķ���<br>    ģ�飺smb_versionl<br>        ʹ�÷������Ϲ�أ���׸�� use scanner/smb/smb_versionl<br>        ɨ���������������ݿ⣬�鿴db_hosts</p>
-<h3 id="�������o�����SQLserver"><a href="#�������o�����SQLserver" class="headerlink" title="�������ò�����SQLserver"></a>�������ò�����SQLserver</h3><pre><code>���ã�����������SQLserver���Լ�SQL�������İ汾�ţ������˿�,
-    ��nmapɨ�����ж˿�Ҫ��Ķ�
+                <h3 id="metasploit的内建扫描器："><a href="#metasploit的内建扫描器：" class="headerlink" title="metasploit的内建扫描器："></a>metasploit的内建扫描器：</h3><pre><code>使用search portscan 查看所有端口扫描工具
+    工具的使用：
+        实在记不住查show optins,系统就会列出
+    老规矩：    一，选择使用的模块----use scannet/portscan/syn
+                 二，设置目标主机、----set RHOSTS 192.168.1.1
+        三，设置线程----set THREADS 50
+        四，运行-----run
+</code></pre><p>back：切换上下模块</p>
+<h3 id="服务器消息快协议扫描："><a href="#服务器消息快协议扫描：" class="headerlink" title="服务器消息快协议扫描："></a>服务器消息快协议扫描：</h3><pre><code>作用：遍历网络，发现window主机系统版本号
+</code></pre><p>   （使用Samba服务，linux,与window共享的服务）<br>    模块：smb_versionl<br>        使用方法：老规矩，不赘述 use scanner/smb/smb_versionl<br>        扫描结果：保存在数据库，查看db_hosts</p>
+<h3 id="搜索配置不当的SQLserver"><a href="#搜索配置不当的SQLserver" class="headerlink" title="搜索配置不当的SQLserver"></a>搜索配置不当的SQLserver</h3><pre><code>作用：搜索子网的SQLserver，以及SQL服务器的版本号，监听端口,
+    比nmap扫描所有端口要快的多
 
-ģ�飺mssql_ping
-ʹ�ã��Ϲ�أ���׸�� use scanner/msmsql/mssql_ping
-</code></pre><h3 id="ssh�����i�裺"><a href="#ssh�����i�裺" class="headerlink" title="ssh�����ɨ�裺"></a>ssh�����ɨ�裺</h3><pre><code>����:��Ҫ�����ض��汾�ķ����������������ɨ��
-ģ�飺ssh_version
-ʹ�ã�use scanner/������/ģ��
-</code></pre><h3 id="ftpi�裺"><a href="#ftpi�裺" class="headerlink" title="ftpɨ�裺"></a>ftpɨ�裺</h3><pre><code>ģ�飺ftp_versionɨ���Ƿ�����ftp
-    anonymous�Ƿ�����������¼
+模块：mssql_ping
+使用：老规矩，不赘述 use scanner/msmsql/mssql_ping
+</code></pre><h3 id="ssh服务的扫描："><a href="#ssh服务的扫描：" class="headerlink" title="ssh服务的扫描："></a>ssh服务的扫描：</h3><pre><code>作用:想要攻击特定版本的服务器，可以用这个扫描
+模块：ssh_version
+使用：use scanner/服务名/模块
+</code></pre><h3 id="ftp扫描："><a href="#ftp扫描：" class="headerlink" title="ftp扫描："></a>ftp扫描：</h3><pre><code>模块：ftp_version扫描是否开启了ftp
+    anonymous是否允许匿名登录
 
-ʹ�ã�use scanner/ftp/ftp_version
+使用：use scanner/ftp/ftp_version
     use auxiliary /scannet/ftp/anonymous
-</code></pre><h3 id="������Э-snmp-i�裺"><a href="#������Э-snmp-i�裺" class="headerlink" title="������Э(snmp)ɨ�裺"></a>������Э(snmp)ɨ�裺</h3><pre><code>����:����ܻ�ȡ�ɶ�/��д��·����SNMP�����ַ�������һ���Ķ����������������·���������ö���
-    �޸ģ�Ȼ�󴫻�·������
-ȱ�ݰ汾��v1,v2
-ģ�飺snmp_enum����
-    snmp_login(����ʹ���ֵ�½�SNMP�����ַ���)
-ʹ�ã�һ���÷�
+</code></pre><h3 id="简单网管协-snmp-扫描："><a href="#简单网管协-snmp-扫描：" class="headerlink" title="简单网管协(snmp)扫描："></a>简单网管协(snmp)扫描：</h3><pre><code>作用:如果能获取可读/可写的路由器SNMP团体字符（密码一样的东西），便可以下载路由器的配置对其
+    修改，然后传回路由器中
+缺陷版本：v1,v2
+模块：snmp_enum（）
+    snmp_login(可以使用字典猜解SNMP团体字符串)
+使用：一样用法
 </code></pre>
             </div>
             <hr>
@@ -606,10 +606,10 @@
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《metaspolit������》
+                    《metaspolit基础二》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/21/metasploit二/" property="cc:attributionName" rel="cc:attributionURL">
-                ����ui��
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/21/metasploit02/" property="cc:attributionName" rel="cc:attributionURL">
+                哆啦ui萌
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
@@ -652,18 +652,18 @@
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2019/05/21/metasploit二/">
+                <a href="/2019/05/21/metasploit02/">
                     <div class="card-image">
                         
-                        <img src="/source/medias/featureimages/1.jpg" class="responsive-img" alt="metaspolit������">
+                        <img src="/source/medias/featureimages/1.jp" class="responsive-img" alt="metaspolit基础二">
                         
-                        <span class="card-title">metaspolit������</span>
+                        <span class="card-title">metaspolit基础二</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            �ú�ѧϰ���������ϣ�����
+                            好好学习，天天向上！！！
                         
                     </div>
                     <div class="publish-info">
@@ -673,7 +673,7 @@
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            ����ui��
+                            哆啦ui萌
                             
                         </span>
                     </div>
@@ -682,8 +682,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mataspolit-��͸����/" target="_blank">
-                        <span class="chip bg-color">mataspolit ��͸����</span>
+                    <a href="/tags/mataspolit-渗透测试/" target="_blank">
+                        <span class="chip bg-color">mataspolit 渗透测试</span>
                     </a>
                     
                 </div>
@@ -853,7 +853,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">437</span>
+                <span class="white-color">716</span>
             
 
             
