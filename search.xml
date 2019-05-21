@@ -23,23 +23,23 @@
     
     
     <entry>
-      <title>���������������</title>
+      <title>虚拟机网络问题解决</title>
       <link href="/2019/05/21/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
       <url>/2019/05/21/%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
       
-        <content type="html"><![CDATA[<p>�����������������</p><pre><code>�������⣺    ���������������ûŪ��    ���Linux�����������ļ���windowûʲô�ü��ģ�    �������������û���򱻽���        ���������server    ����������û���򱻽���        ������</code></pre><p>�����������ƣ�ѧУ��������֮���    </p><div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27946215&auto=1&height=66"></iframe></div>        ]]></content>
+        <content type="html"><![CDATA[<p>虚拟机网络问题解决：</p><pre><code>三个问题：    虚拟机中网络配置没弄好    检查Linux中网络配置文件（window没什么好检查的）    物理机网络服务没开或被禁用        检查物理机server    物理机网卡没开或被禁用        打开网卡</code></pre><p>特殊网络限制：学校网络限制之类的    </p><div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27946215&auto=1&height=66"></iframe></div>        ]]></content>
       
       
       <categories>
           
-          <category> �������� </category>
+          <category> 技术问题 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> ����� </tag>
+            <tag> 虚拟机 </tag>
             
         </tags>
       
