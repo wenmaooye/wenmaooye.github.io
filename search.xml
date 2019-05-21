@@ -4,11 +4,55 @@
   
     
     <entry>
+      <title>metaspolit������</title>
+      <link href="/2019/05/21/metasploit%E4%BA%8C/"/>
+      <url>/2019/05/21/metasploit%E4%BA%8C/</url>
+      
+        <content type="html"><![CDATA[<h3 id="metasploit���ڽ�i������"><a href="#metasploit���ڽ�i������" class="headerlink" title="metasploit���ڽ�ɨ������"></a>metasploit���ڽ�ɨ������</h3><pre><code>ʹ��search portscan �鿴���ж˿�ɨ�蹤��    ���ߵ�ʹ�ã�        ʵ�ڼǲ�ס��show optins,ϵͳ�ͻ��г�    �Ϲ�أ�һ��ѡ��ʹ�õ�ģ��----use scannet/portscan/syn                 ��������Ŀ��������----set RHOSTS 192.168.1.1        ���������߳�----set THREADS 50        �ģ�����-----run</code></pre><p>back���л�����ģ��</p><h3 id="��������Ϣ��Э��i�裺"><a href="#��������Ϣ��Э��i�裺" class="headerlink" title="��������Ϣ��Э��ɨ�裺"></a>��������Ϣ��Э��ɨ�裺</h3><pre><code>���ã��������磬����window����ϵͳ�汾��</code></pre><p>   ��ʹ��Samba����linux,��window�����ķ���<br>    ģ�飺smb_versionl<br>        ʹ�÷������Ϲ�أ���׸�� use scanner/smb/smb_versionl<br>        ɨ���������������ݿ⣬�鿴db_hosts</p><h3 id="�������o�����SQLserver"><a href="#�������o�����SQLserver" class="headerlink" title="�������ò�����SQLserver"></a>�������ò�����SQLserver</h3><pre><code>���ã�����������SQLserver���Լ�SQL�������İ汾�ţ������˿�,    ��nmapɨ�����ж˿�Ҫ��Ķ�ģ�飺mssql_pingʹ�ã��Ϲ�أ���׸�� use scanner/msmsql/mssql_ping</code></pre><h3 id="ssh�����i�裺"><a href="#ssh�����i�裺" class="headerlink" title="ssh�����ɨ�裺"></a>ssh�����ɨ�裺</h3><pre><code>����:��Ҫ�����ض��汾�ķ����������������ɨ��ģ�飺ssh_versionʹ�ã�use scanner/������/ģ��</code></pre><h3 id="ftpi�裺"><a href="#ftpi�裺" class="headerlink" title="ftpɨ�裺"></a>ftpɨ�裺</h3><pre><code>ģ�飺ftp_versionɨ���Ƿ�����ftp    anonymous�Ƿ�����������¼ʹ�ã�use scanner/ftp/ftp_version    use auxiliary /scannet/ftp/anonymous</code></pre><h3 id="������Э-snmp-i�裺"><a href="#������Э-snmp-i�裺" class="headerlink" title="������Э(snmp)ɨ�裺"></a>������Э(snmp)ɨ�裺</h3><pre><code>����:����ܻ�ȡ�ɶ�/��д��·����SNMP�����ַ�������һ���Ķ����������������·���������ö���    �޸ģ�Ȼ�󴫻�·������ȱ�ݰ汾��v1,v2ģ�飺snmp_enum����    snmp_login(����ʹ���ֵ�½�SNMP�����ַ���)ʹ�ã�һ���÷�</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mataspolit ��͸���� </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>���������������</title>
+      <link href="/2019/05/21/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+      <url>/2019/05/21/%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
+      
+        <content type="html"><![CDATA[<!-- ![](1.jpg) --><!-- <img src='F:\blog\blog\themes\hexo-theme-matery\source\medias\featureimages\12.jpg'> --><p>�����������������<br>    �������⣺</p><pre><code>���������������ûŪ�����Linux�����������ļ���windowûʲô�ü��ģ��������������û���򱻽���    ���������server����������û���򱻽���    ������</code></pre><p>�����������ƣ�ѧУ��������֮���    </p><div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27946215&auto=1&height=66"></iframe></div>        ]]></content>
+      
+      
+      <categories>
+          
+          <category> �������� </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ����� </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>刘傻子~~~~~~</title>
       <link href="/2019/05/20/520/"/>
       <url>/2019/05/20/520/</url>
       
-        <content type="html"><![CDATA[<p> 今天是520了！！</p><p> 脱单了哈~-~-~</p><p>哈哈哈哈</p><p>———–哆啦A梦</p>]]></content>
+        <content type="html"><![CDATA[<p> 今天是520了！！</p><p> 脱单了哈~-~-~</p><p>哈哈哈哈</p><p>———–哆啦A梦</p><div align="middle"><embed src="//music.163.com/style/swf/widget.swf?sid=393685&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"></div>]]></content>
       
       
       
@@ -23,11 +67,11 @@
     
     
     <entry>
-      <title>metaspolit基础</title>
+      <title>metaspolit基础一</title>
       <link href="/2019/05/20/metasploit/"/>
       <url>/2019/05/20/metasploit/</url>
       
-        <content type="html"><![CDATA[<p>metasploit的理解：他是一个工具框架·，需要接口连接使用。</p><p>metasploit使用：</p><pre><code>接入接口三个：终端，命令行，图形化界面    终端的打开：msfconsole    命令行：/opt/framework3/msf3    图形化界面：armitage</code></pre><p>功能程序（即metasploit的功能）：<br>    msf攻击载荷生成器，<br>    msf编码器<br>    nasm shell (找出Opcode操作码)</p><p>metasploit渗透测试步骤:<br>    信息收集：</p><pre><code> 被动搜集：（不接触目标系统下）whois查询：例如：查询dns信息，是否由内部提供netcraft:查询网站IPnslookup:获取更多附加信息  主动搜集：（用工具与目标系统对话）nmap:</code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="metasploit的理解："><a href="#metasploit的理解：" class="headerlink" title="metasploit的理解："></a>metasploit的理解：</h3><pre><code>他是一个工具框架·，需要接口连接使用。</code></pre><h3 id="metasploit使用："><a href="#metasploit使用：" class="headerlink" title="metasploit使用："></a>metasploit使用：</h3><pre><code>接入接口三个：终端，命令行，图形化界面    终端的打开：msfconsole    命令行：/opt/framework3/msf3    图形化界面：armitage</code></pre><h3 id="功能程序（即metasploit的功能）："><a href="#功能程序（即metasploit的功能）：" class="headerlink" title="功能程序（即metasploit的功能）："></a>功能程序（即metasploit的功能）：</h3><pre><code>msf攻击载荷生成器，msf编码器nasm shell (找出Opcode操作码)</code></pre><h3 id="metasploit渗透测试步骤"><a href="#metasploit渗透测试步骤" class="headerlink" title="metasploit渗透测试步骤:"></a>metasploit渗透测试步骤:</h3><pre><code>信息收集：     被动搜集：（不接触目标系统下）    whois查询：例如：查询dns信息，是否由内部提供    netcraft:查询网站IP    nslookup:获取更多附加信息      主动搜集：（用工具与目标系统对话）    nmap:</code></pre>]]></content>
       
       
       
@@ -55,17 +99,17 @@
     
     
     <entry>
-      <title>article title</title>
+      <title>没什么</title>
       <link href="/2019/05/19/article-title/"/>
       <url>/2019/05/19/article-title/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>哈哈哈哈</p>]]></content>
       
       
       
         <tags>
             
-            <tag> fggg </tag>
+            <tag> 无聊 </tag>
             
         </tags>
       
