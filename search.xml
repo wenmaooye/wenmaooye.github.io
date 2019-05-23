@@ -4,17 +4,150 @@
   
     
     <entry>
-      <title>黄绍模</title>
-      <link href="/2019/05/22/test/"/>
-      <url>/2019/05/22/test/</url>
+      <title>��͸�ĵ�</title>
+      <link href="/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%94/"/>
+      <url>/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%94/</url>
       
-        <content type="html"><![CDATA[<p>乱码看看开了没考虑快没了 乱码了了， 乱码开门开门可能乱码乱码开门开了空间来看吗里面了乱码可能就你看了吗哪里哪里骂你没理你了明年见你了<br>你好好久就能加快</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1300221567&auto=1&height=66"></iframe>]]></content>
+        <content type="html"><![CDATA[<p>����͸���Թ����У��㲻��ΪѰ�ҽݾ����е�һ˿����������Ҫѧ�����ɨ�裬<br>        �����Ŀ���ڵ���֪������©�����ܹ�<br>        ���ɻ�ȡ���ŵ��ض�����ϵͳ������ ������������ȱ��</p><p>��ѧϰ����ʱ������Ҫ����ԭ����������ԭ���Ƚ����ף�����Ҫ����ʵ�������֣���Ҫ<br>    ��Ϊ����ԭ���ͻ����ˣ������������֪��ԭ����ô�򵥵Ķ���ô�����⡣<br>    ���ڶ��ζ�������ʱ����ͻᷢ��ʱ�ܼ򵥵ģ����Կ�ͷ���ѣ�<br>(������……..)</p>]]></content>
       
       
       
         <tags>
             
-            <tag> 黄绍模 </tag>
+            <tag> ��͸���� </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>metasploitģ��ķ��༰ʹ��</title>
+      <link href="/2019/05/23/metasploit%E6%A8%A1%E5%9D%97%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+      <url>/2019/05/23/metasploit%E6%A8%A1%E5%9D%97%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>ģ���ʹ�ö���ͬС�� ����������table����ȫ��</p><pre><code>��Ҫɨ�裬�����������κ�ģ�飺    ��ʽ���ǣ�use + ģ������ +ģ�������           eg:��������ɨ�������п���ftp������,��ô��ʽ�ǣ�    use auxiliary������ģ�����ͣ�scanner/ftp/ftp_version  (ģ�������)</code></pre><p>ģ���У�</p><pre><code>����ģ�顤��auxiliary ��������ɨ���������ģ�飨exploit������͸����</code></pre><p>�鿴ģ�飺<br>    ������search<br>    �鿴��ʲôģ�飺show<br>    �鿴һ��ģ����������ʲôģ�飺show ģ������<br>    �鿴һ��ģ�����ã�show options<br>    �鿴һ��ģ��Ĺ����غɣ�show payload<br>    �鿴һ��ģ����Ӱ��İ汾��show targets ��һ��metasploit�����Ŀ��ϵͳ�Լ�ѡ������Լ�ѡ��<br>    �鿴һ��ģ�����ϸ��Ϣ���ڸ�ģ���£�info</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> metasploit </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>��͸��׼</title>
+      <link href="/2019/05/23/%E6%B8%97%E9%80%8F%E6%AD%A5%E9%AA%A4/"/>
+      <url>/2019/05/23/%E6%B8%97%E9%80%8F%E6%AD%A5%E9%AA%A4/</url>
+      
+        <content type="html"><![CDATA[<p>ptes��׼��<br>    һ��ǰ�ڿͻ�����<br>    �����鱨�Ѽ�<br>    ����ͨ���Ѽ�������в��ģ<br>    �ģ�©������<br>    �壬��͸����<br>    �� ������͸<br>    �ߣ�����</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ��͸���� </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>��ݼ�</title>
+      <link href="/2019/05/23/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+      <url>/2019/05/23/%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+      
+        <content type="html"><![CDATA[<p>win+D �ص�����<br>alt +�ո� +n ��С����ǰ����<br>alt +�ո� +x ��󻯵�ǰ����<br>alt +f4 �رյ�ǰ���ڣ�ȫ��ͨ�ã�<br>ctrl +_alt+ ���Ҽ� ������л�<br>alt + ctrl �� alt +�ո� +n ��С����ǰ���� ���������������֮���л�</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ���Լ��� </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ɨ����</title>
+      <link href="/2019/05/23/%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F/"/>
+      <url>/2019/05/23/%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F/</url>
+      
+        <content type="html"><![CDATA[<p>ר��ɨ������<br>    ���⣺ɨ�������������������ױ��˷��֣���ʡʱʡ��������</p><pre><code>��ҳɨ�裺    NeXpose:�������汾������ҳͼ�λ�����                Ҫ�Ƚ�վ��,����ɨ�裬���ɱ��棬����metasploit���ݿ���                db_import  ��Ҫ������ļ���ַ    ���������ݿ���                ��metasploit������                    ���������ݿ�                                                                        ����NeXpose �����load nexpose                    �ṩ�û����������ip��ַ��nexpose_connect -h                    ɨ�裺nexpose_scan ��IP��ַ                    db_vulns ��©����Ϣ    Nessus:�������汾������ҳͼ�λ�����                ɨ�赼��            ��metasploit������                ���������ݿ�                                                                    ����Nessus�����load nessus</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ɨ���� </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>nmap�ĸ߼�Ӧ��</title>
+      <link href="/2019/05/22/nmap%E7%9A%84%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/"/>
+      <url>/2019/05/22/nmap%E7%9A%84%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>nmap�ĸ߼�Ӧ�ã�</p><pre><code>nmap������-sT�����ص�tcp����ɨ�裬���ж˿�ɨ��ö������ɿ��ģ�����ɨ�裺ʹ��metasploit��ܵ�scanner/ip/ipiseqģ��ɨ�������IP             ����nmap��-sI����ָ������ip(���磺192.168.1.1)��Ŀ������ɨ��    ���磺nmap -sI 192.168.1.1 192.168.1.X��msf�ն�������nmap��        ����msf�նˣ��������ݿ��ʹ��db_nmap���Զ�������洢        �����ݿ��С�</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> nmap </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>��͸��׼</title>
+      <link href="/2019/05/22/metasploit%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B/"/>
+      <url>/2019/05/22/metasploit%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>metasploit�����������̣�<br>    ɨ���©�������ȱ�ݣ�nmap<br>    ���ҳ����©��ģ�飻search+©������<br>    ����ʹ��ģ�飺use ģ����<br>    ������ع����غɣ�show payload<br>    ������ز�����set payload��set rhosts,set  post �ȵȣ���set<br>    ����������exploit</p><pre><code>����ѡ��Ĺ����غɣ��в�ͬ�Ľ����һ��᷵�ضԷ���������ʾ�����նˣ�</code></pre><p>���÷����˿�ʱ�����ںܶ���֯�ڲ����������ϸ�Ķ˿ڹ��ˣ����ǲ�֪����Щ�˿ڴ���<br>        ��������</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ��͸���� </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>����ִ��©��</title>
+      <link href="/2019/05/22/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/"/>
+      <url>/2019/05/22/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/</url>
+      
+        <content type="html"><![CDATA[<p>����ִ��©����</p><pre><code>ԭ����û�кܺõĹ����û����������ݣ�    ����ִ��©��  ����ִ�ű������ӵ���ϵͳ����-----PHP�����н϶����ࣺ        ����ִ��©����ֱ�ӵ���ϵͳ����    ���ִ��©����java��ܡ�thinKPHP��ܣ������������ʽ��������������Ҫʹ��ϵͳִ������          ��ִ�������֮ǰ���������ù��ˣ�ת��          ȷ��ʹ�õĺ�����ָ���ĺ���֮һ           ��PHP������˵��������ȫ���Ƶ�Σ�պ�����Ҫʹ��</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ����ִ��©�� </tag>
             
         </tags>
       
