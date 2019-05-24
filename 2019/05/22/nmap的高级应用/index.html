@@ -4,12 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="nmap�ĸ߼�Ӧ��, 哆啦ui萌">
-    <meta name="description" content="nmap�ĸ߼�Ӧ�ã�
-nmap������-sT�����ص�tcp����ɨ�裬���ж˿�ɨ��ö������ɿ��ģ�
+    <meta name="keywords" content="nmap的高级应用, 哆啦ui萌">
+    <meta name="description" content="nmap的高级应用：
+nmap参数：-sT（隐秘的tcp连接扫描，进行端口扫描枚举是最可靠的）
 
 
-����ɨ�裺ʹ��metasploit��ܵ�scanner/ip/ipiseqģ��ɨ�������I">
+空闲扫描：使用metasploit框架的scanner/ip/ipiseq模块扫描出空闲IP        
+     再用nmap中-sI">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>nmap�ĸ߼�Ӧ�� | 哆啦ui萌</title>
+    <title>nmap的高级应用 | 哆啦ui萌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -274,13 +275,13 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        nmap�ĸ߼�Ӧ��
+                        nmap的高级应用
                     </div>
                 </div>
             </div>
@@ -413,7 +414,7 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        39
+                        120
                     </div>
                     
 
@@ -436,18 +437,18 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>nmap�ĸ߼�Ӧ�ã�</p>
-<pre><code>nmap������-sT�����ص�tcp����ɨ�裬���ж˿�ɨ��ö������ɿ��ģ�
+                <p>nmap的高级应用：</p>
+<pre><code>nmap参数：-sT（隐秘的tcp连接扫描，进行端口扫描枚举是最可靠的）
 
 
-����ɨ�裺ʹ��metasploit��ܵ�scanner/ip/ipiseqģ��ɨ�������IP        
-     ����nmap��-sI����ָ������ip(���磺192.168.1.1)��Ŀ������ɨ��
-    ���磺nmap -sI 192.168.1.1 192.168.1.X
+空闲扫描：使用metasploit框架的scanner/ip/ipiseq模块扫描出空闲IP        
+     再用nmap中-sI参数指定空闲ip(例如：192.168.1.1)对目标主机扫描
+    例如：nmap -sI 192.168.1.1 192.168.1.X
 
 
-��msf�ն�������nmap��
-        ����msf�նˣ��������ݿ��ʹ��db_nmap���Զ�������洢
-        �����ݿ��С�
+在msf终端中运行nmap：
+        进入msf终端，连接数据库后，使用db_nmap会自动将结果存储
+        在数据库中。
 </code></pre>
             </div>
             <hr>
@@ -603,10 +604,10 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《nmap�ĸ߼�Ӧ��》
+                    《nmap的高级应用》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/22/nmap的高级应用/" property="cc:attributionName" rel="cc:attributionURL">
-                ����ui��
+                哆啦ui萌
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
@@ -648,19 +649,19 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/23/基本扫描/">
+                <a href="/2019/05/23/基本扫描1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="ɨ����">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="扫描器">
                         
-                        <span class="card-title">ɨ����</span>
+                        <span class="card-title">扫描器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ɨ����
+                            扫描器
                         
                     </div>
                     <div class="publish-info">
@@ -670,7 +671,7 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            ����ui��
+                            哆啦ui萌
                             
                         </span>
                     </div>
@@ -678,8 +679,8 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/i����/" target="_blank">
-                        <span class="chip bg-color">ɨ����</span>
+                    <a href="/tags/扫描器/" target="_blank">
+                        <span class="chip bg-color">扫描器</span>
                     </a>
                     
                 </div>
@@ -693,19 +694,19 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/22/纳尼/">
+                <a href="/2019/05/22/metasploit攻击流程1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="nmap的高级应用">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="渗透标准">
                         
-                        <span class="card-title">nmap的高级应用</span>
+                        <span class="card-title">渗透标准</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            nmap的高级应用
+                            渗透标准
                         
                     </div>
                     <div class="publish-info">
@@ -723,8 +724,8 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nmap/" target="_blank">
-                        <span class="chip bg-color">nmap</span>
+                    <a href="/tags/渗透测试/" target="_blank">
+                        <span class="chip bg-color">渗透测试</span>
                     </a>
                     
                 </div>
@@ -845,7 +846,7 @@ nmap������-sT�����ص�tcp����ɨ�裬���ж�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">1k</span>
+                <span class="white-color">1.8k</span>
             
 
             

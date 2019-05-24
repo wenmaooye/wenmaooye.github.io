@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="��͸�ĵ�, 哆啦ui萌">
-    <meta name="description" content="����͸���Թ����У��㲻��ΪѰ�ҽݾ����е�һ˿����������Ҫѧ�����ɨ�裬        �����Ŀ���ڵ���֪������©�����ܹ�        ���ɻ�ȡ���ŵ��ض�����ϵͳ����">
+    <meta name="keywords" content="扫描器, 哆啦ui萌">
+    <meta name="description" content="专用扫描器：    理解：扫描会产生大量流量，容易被人发现；但省时省力，会误报
+网页扫描：
+    NeXpose:有两个版本，在网页图形化运行
+                要先建站点,设置扫描，生成报告，导入metasploit数据库">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>��͸�ĵ� | 哆啦ui萌</title>
+    <title>扫描器 | 哆啦ui萌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -270,13 +273,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        ��͸�ĵ�
+                        扫描器
                     </div>
                 </div>
             </div>
@@ -387,8 +390,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/��͸����/" target="_blank">
-                                <span class="chip bg-color">��͸����</span>
+                            <a href="/tags/扫描器/" target="_blank">
+                                <span class="chip bg-color">扫描器</span>
                             </a>
                         
                     </div>
@@ -409,7 +412,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        15
+                        166
                     </div>
                     
 
@@ -432,9 +435,34 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>����͸���Թ����У��㲻��ΪѰ�ҽݾ����е�һ˿����������Ҫѧ�����ɨ�裬<br>        �����Ŀ���ڵ���֪������©�����ܹ�<br>        ���ɻ�ȡ���ŵ��ض�����ϵͳ������ ������������ȱ��</p>
-<p>��ѧϰ����ʱ������Ҫ����ԭ����������ԭ���Ƚ����ף�����Ҫ����ʵ�������֣���Ҫ<br>    ��Ϊ����ԭ���ͻ����ˣ������������֪��ԭ����ô�򵥵Ķ���ô�����⡣<br>    ���ڶ��ζ�������ʱ����ͻᷢ��ʱ�ܼ򵥵ģ����Կ�ͷ���ѣ�<br>(������……..)</p>
+                <p>专用扫描器：<br>    理解：扫描会产生大量流量，容易被人发现；但省时省力，会误报</p>
+<pre><code>网页扫描：
+    NeXpose:有两个版本，在网页图形化运行
+                要先建站点,设置扫描，生成报告，导入metasploit数据库中
+                db_import  接要导入的文件地址    来导入数据库中
 
+
+                在metasploit中运行
+                    先连接数据库
+                                                                        加载NeXpose 插件：load nexpose
+                    提供用户名及密码和ip地址：nexpose_connect -h
+                    扫描：nexpose_scan 加IP地址
+                    db_vulns 查漏洞信息
+
+
+    Nessus:有两个版本，在网页图形化运行
+
+                扫描导入
+
+
+
+
+
+            在metasploit中运行
+
+                先连接数据库
+                                                                    加载Nessus插件：load nessus
+</code></pre>
             </div>
             <hr>
 
@@ -589,10 +617,10 @@
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《��͸�ĵ�》
+                    《扫描器》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/23/渗透随笔/" property="cc:attributionName" rel="cc:attributionURL">
-                ����ui��
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/05/23/基本扫描1/" property="cc:attributionName" rel="cc:attributionURL">
+                哆啦ui萌
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
                 知识共享署名 4.0 国际许可协议
@@ -632,41 +660,40 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/05/23/渗透随笔/">
+                <a href="/2019/05/23/快捷键1/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="��͸�ĵ�">
                         
-                        <span class="card-title">��͸�ĵ�</span>
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="快捷键">
+                        
+                        <span class="card-title">快捷键</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ���
+                            快捷键
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            ����ui��
+                            哆啦ui萌
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/��͸����/" target="_blank">
-                        <span class="chip bg-color">��͸����</span>
+                    <a href="/tags/电脑技巧/" target="_blank">
+                        <span class="chip bg-color">电脑技巧</span>
                     </a>
                     
                 </div>
@@ -680,29 +707,29 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/05/23/metasploit模块的分类及使用/">
+                <a href="/2019/05/22/nmap的高级应用/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="metasploitģ��ķ��༰ʹ��">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="nmap的高级应用">
                         
-                        <span class="card-title">metasploitģ��ķ��༰ʹ��</span>
+                        <span class="card-title">nmap的高级应用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            metasploitģ��ķ��༰ʹ��
+                            nmap的高级应用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-23
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            ����ui��
+                            哆啦ui萌
                             
                         </span>
                     </div>
@@ -710,8 +737,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/metasploit/" target="_blank">
-                        <span class="chip bg-color">metasploit</span>
+                    <a href="/tags/nmap/" target="_blank">
+                        <span class="chip bg-color">nmap</span>
                     </a>
                     
                 </div>
@@ -832,7 +859,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">1k</span>
+                <span class="white-color">1.8k</span>
             
 
             

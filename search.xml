@@ -4,17 +4,17 @@
   
     
     <entry>
-      <title>��͸�ĵ�</title>
-      <link href="/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%94/"/>
-      <url>/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%94/</url>
+      <title>渗透心得</title>
+      <link href="/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%941/"/>
+      <url>/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%941/</url>
       
-        <content type="html"><![CDATA[<p>����͸���Թ����У��㲻��ΪѰ�ҽݾ����е�һ˿����������Ҫѧ�����ɨ�裬<br>        �����Ŀ���ڵ���֪������©�����ܹ�<br>        ���ɻ�ȡ���ŵ��ض�����ϵͳ������ ������������ȱ��</p><p>��ѧϰ����ʱ������Ҫ����ԭ����������ԭ���Ƚ����ף�����Ҫ����ʵ�������֣���Ҫ<br>    ��Ϊ����ԭ���ͻ����ˣ������������֪��ԭ����ô�򵥵Ķ���ô�����⡣<br>    ���ڶ��ζ�������ʱ����ͻᷢ��ʱ�ܼ򵥵ģ����Կ�ͷ���ѣ�<br>(������……..)</p>]]></content>
+        <content type="html"><![CDATA[<p>在渗透测试工作中，你不必为寻找捷径而感到一丝羞愧，所以要学会针对扫描，<br>        针对找目标在的已知可利用漏洞或能过<br>        轻松获取后门的特定操作系统、服务 ，软件，配置缺陷</p><p>在学习技能时，首先要明白原理，（明白原理比较容易），重要的是实践，动手，不要<br>    以为明白原理就会用了，动起手来你就知道原来那么简单的都那么多问题。<br>    但第二次动手做的时候你就会发现时很简单的（所以开头才难）<br>(更新中……..)</p>]]></content>
       
       
       
         <tags>
             
-            <tag> ��͸���� </tag>
+            <tag> 渗透测试 </tag>
             
         </tags>
       
@@ -23,11 +23,11 @@
     
     
     <entry>
-      <title>metasploitģ��ķ��༰ʹ��</title>
-      <link href="/2019/05/23/metasploit%E6%A8%A1%E5%9D%97%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
-      <url>/2019/05/23/metasploit%E6%A8%A1%E5%9D%97%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+      <title>metasploit模块的分类及使用</title>
+      <link href="/2019/05/23/metasploit%E6%A8%A1%E5%9D%97%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E4%BD%BF%E7%94%A81/"/>
+      <url>/2019/05/23/metasploit%E6%A8%A1%E5%9D%97%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E4%BD%BF%E7%94%A81/</url>
       
-        <content type="html"><![CDATA[<p>ģ���ʹ�ö���ͬС�� ����������table����ȫ��</p><pre><code>��Ҫɨ�裬�����������κ�ģ�飺    ��ʽ���ǣ�use + ģ������ +ģ�������           eg:��������ɨ�������п���ftp������,��ô��ʽ�ǣ�    use auxiliary������ģ�����ͣ�scanner/ftp/ftp_version  (ģ�������)</code></pre><p>ģ���У�</p><pre><code>����ģ�顤��auxiliary ��������ɨ���������ģ�飨exploit������͸����</code></pre><p>�鿴ģ�飺<br>    ������search<br>    �鿴��ʲôģ�飺show<br>    �鿴һ��ģ����������ʲôģ�飺show ģ������<br>    �鿴һ��ģ�����ã�show options<br>    �鿴һ��ģ��Ĺ����غɣ�show payload<br>    �鿴һ��ģ����Ӱ��İ汾��show targets ��һ��metasploit�����Ŀ��ϵͳ�Լ�ѡ������Լ�ѡ��<br>    �鿴һ��ģ�����ϸ��Ϣ���ڸ�ģ���£�info</p>]]></content>
+        <content type="html"><![CDATA[<p>模块的使用都大同小异 （都可以用table键补全）</p><pre><code>想要扫描，攻击或其他任何模块：    格式都是：use + 模块类型 +模块的名字           eg:比如我想扫描网络中开启ftp的主机,那么格式是：    use auxiliary（辅助模块类型）scanner/ftp/ftp_version  (模块的名字)</code></pre><p>模块有：</p><pre><code>辅助模块・（auxiliary ）：用了扫描或查点攻击模块（exploit）：渗透攻击</code></pre><p>查看模块：<br>    搜索：search<br>    查看有什么模块：show<br>    查看一个模块类型下有什么模块：show 模块类型<br>    查看一个模块配置：show options<br>    查看一个模块的攻击载荷：show payload<br>    查看一个模块受影响的版本：show targets （一般metasploit会根据目标系统自己选择，最好自己选择）<br>    查看一个模块的详细信息：在该模块下：info</p>]]></content>
       
       
       
@@ -42,17 +42,17 @@
     
     
     <entry>
-      <title>��͸��׼</title>
-      <link href="/2019/05/23/%E6%B8%97%E9%80%8F%E6%AD%A5%E9%AA%A4/"/>
-      <url>/2019/05/23/%E6%B8%97%E9%80%8F%E6%AD%A5%E9%AA%A4/</url>
+      <title>渗透标准</title>
+      <link href="/2019/05/23/%E6%B8%97%E9%80%8F%E6%AD%A5%E9%AA%A41/"/>
+      <url>/2019/05/23/%E6%B8%97%E9%80%8F%E6%AD%A5%E9%AA%A41/</url>
       
-        <content type="html"><![CDATA[<p>ptes��׼��<br>    һ��ǰ�ڿͻ�����<br>    �����鱨�Ѽ�<br>    ����ͨ���Ѽ�������в��ģ<br>    �ģ�©������<br>    �壬��͸����<br>    �� ������͸<br>    �ߣ�����</p>]]></content>
+        <content type="html"><![CDATA[<p>ptes标准：<br>    一，前期客户交互<br>    二，情报搜集<br>    三，通过搜集进行威胁建模<br>    四，漏洞分析<br>    五，渗透攻击<br>    六 ，后渗透<br>    七，报告</p>]]></content>
       
       
       
         <tags>
             
-            <tag> ��͸���� </tag>
+            <tag> 渗透测试 </tag>
             
         </tags>
       
@@ -61,17 +61,17 @@
     
     
     <entry>
-      <title>��ݼ�</title>
-      <link href="/2019/05/23/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-      <url>/2019/05/23/%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+      <title>快捷键</title>
+      <link href="/2019/05/23/%E5%BF%AB%E6%8D%B7%E9%94%AE1/"/>
+      <url>/2019/05/23/%E5%BF%AB%E6%8D%B7%E9%94%AE1/</url>
       
-        <content type="html"><![CDATA[<p>win+D �ص�����<br>alt +�ո� +n ��С����ǰ����<br>alt +�ո� +x ��󻯵�ǰ����<br>alt +f4 �رյ�ǰ���ڣ�ȫ��ͨ�ã�<br>ctrl +_alt+ ���Ҽ� ������л�<br>alt + ctrl �� alt +�ո� +n ��С����ǰ���� ���������������֮���л�</p>]]></content>
+        <content type="html"><![CDATA[<p>win+D 回到主题<br>alt +空格 +n 最小化当前窗口<br>alt +空格 +x 最大化当前窗口<br>alt +f4 关闭当前窗口（全局通用）<br>ctrl +_alt+ 左右键 虚拟机切换<br>alt + ctrl 后 alt +空格 +n 最小化当前窗口 即可主机与虚拟机之间切换</p>]]></content>
       
       
       
         <tags>
             
-            <tag> ���Լ��� </tag>
+            <tag> 电脑技巧 </tag>
             
         </tags>
       
@@ -80,36 +80,17 @@
     
     
     <entry>
-      <title>ɨ����</title>
-      <link href="/2019/05/23/%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F/"/>
-      <url>/2019/05/23/%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F/</url>
+      <title>扫描器</title>
+      <link href="/2019/05/23/%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F1/"/>
+      <url>/2019/05/23/%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F1/</url>
       
-        <content type="html"><![CDATA[<p>ר��ɨ������<br>    ���⣺ɨ�������������������ױ��˷��֣���ʡʱʡ��������</p><pre><code>��ҳɨ�裺    NeXpose:�������汾������ҳͼ�λ�����                Ҫ�Ƚ�վ��,����ɨ�裬���ɱ��棬����metasploit���ݿ���                db_import  ��Ҫ������ļ���ַ    ���������ݿ���                ��metasploit������                    ���������ݿ�                                                                        ����NeXpose �����load nexpose                    �ṩ�û����������ip��ַ��nexpose_connect -h                    ɨ�裺nexpose_scan ��IP��ַ                    db_vulns ��©����Ϣ    Nessus:�������汾������ҳͼ�λ�����                ɨ�赼��            ��metasploit������                ���������ݿ�                                                                    ����Nessus�����load nessus</code></pre>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> ɨ���� </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>nmap�ĸ߼�Ӧ��</title>
-      <link href="/2019/05/22/nmap%E7%9A%84%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/"/>
-      <url>/2019/05/22/nmap%E7%9A%84%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<p>nmap�ĸ߼�Ӧ�ã�</p><pre><code>nmap������-sT�����ص�tcp����ɨ�裬���ж˿�ɨ��ö������ɿ��ģ�����ɨ�裺ʹ��metasploit��ܵ�scanner/ip/ipiseqģ��ɨ�������IP             ����nmap��-sI����ָ������ip(���磺192.168.1.1)��Ŀ������ɨ��    ���磺nmap -sI 192.168.1.1 192.168.1.X��msf�ն�������nmap��        ����msf�նˣ��������ݿ��ʹ��db_nmap���Զ�������洢        �����ݿ��С�</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>专用扫描器：<br>    理解：扫描会产生大量流量，容易被人发现；但省时省力，会误报</p><pre><code>网页扫描：    NeXpose:有两个版本，在网页图形化运行                要先建站点,设置扫描，生成报告，导入metasploit数据库中                db_import  接要导入的文件地址    来导入数据库中                在metasploit中运行                    先连接数据库                                                                        加载NeXpose 插件：load nexpose                    提供用户名及密码和ip地址：nexpose_connect -h                    扫描：nexpose_scan 加IP地址                    db_vulns 查漏洞信息    Nessus:有两个版本，在网页图形化运行                扫描导入            在metasploit中运行                先连接数据库                                                                    加载Nessus插件：load nessus</code></pre>]]></content>
       
       
       
         <tags>
             
-            <tag> nmap </tag>
+            <tag> 扫描器 </tag>
             
         </tags>
       
@@ -119,8 +100,8 @@
     
     <entry>
       <title>nmap的高级应用</title>
-      <link href="/2019/05/22/%E7%BA%B3%E5%B0%BC/"/>
-      <url>/2019/05/22/%E7%BA%B3%E5%B0%BC/</url>
+      <link href="/2019/05/22/nmap%E7%9A%84%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/"/>
+      <url>/2019/05/22/nmap%E7%9A%84%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</url>
       
         <content type="html"><![CDATA[<p>nmap的高级应用：</p><pre><code>nmap参数：-sT（隐秘的tcp连接扫描，进行端口扫描枚举是最可靠的）空闲扫描：使用metasploit框架的scanner/ip/ipiseq模块扫描出空闲IP             再用nmap中-sI参数指定空闲ip(例如：192.168.1.1)对目标主机扫描    例如：nmap -sI 192.168.1.1 192.168.1.X在msf终端中运行nmap：        进入msf终端，连接数据库后，使用db_nmap会自动将结果存储        在数据库中。</code></pre>]]></content>
       
@@ -137,17 +118,17 @@
     
     
     <entry>
-      <title>��͸��׼</title>
-      <link href="/2019/05/22/metasploit%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B/"/>
-      <url>/2019/05/22/metasploit%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B/</url>
+      <title>渗透标准</title>
+      <link href="/2019/05/22/metasploit%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B1/"/>
+      <url>/2019/05/22/metasploit%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B1/</url>
       
-        <content type="html"><![CDATA[<p>metasploit�����������̣�<br>    ɨ���©�������ȱ�ݣ�nmap<br>    ���ҳ����©��ģ�飻search+©������<br>    ����ʹ��ģ�飺use ģ����<br>    ������ع����غɣ�show payload<br>    ������ز�����set payload��set rhosts,set  post �ȵȣ���set<br>    ����������exploit</p><pre><code>����ѡ��Ĺ����غɣ��в�ͬ�Ľ����һ��᷵�ضԷ���������ʾ�����նˣ�</code></pre><p>���÷����˿�ʱ�����ںܶ���֯�ڲ����������ϸ�Ķ˿ڹ��ˣ����ǲ�֪����Щ�˿ڴ���<br>        ��������</p>]]></content>
+        <content type="html"><![CDATA[<p>metasploit基本攻击流程：<br>    扫描出漏洞或服务缺陷：nmap<br>    查找出相关漏洞模块；search+漏洞名字<br>    导入使用模块：use 模块名<br>    查找相关攻击载荷：show payload<br>    设置相关参数（set payload，set rhosts,set  post 等等）：set<br>    发动攻击：exploit</p><pre><code>看你选择的攻击载荷，有不同的结果，一般会返回对方的命令提示符（终端）</code></pre><p>设置反弹端口时：对于很多组织内部都设置了严格的端口过滤，我们不知道那些端口打开了<br>        可以设置</p>]]></content>
       
       
       
         <tags>
             
-            <tag> ��͸���� </tag>
+            <tag> 渗透测试 </tag>
             
         </tags>
       
@@ -156,17 +137,17 @@
     
     
     <entry>
-      <title>����ִ��©��</title>
-      <link href="/2019/05/22/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/"/>
-      <url>/2019/05/22/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/</url>
+      <title>命令执行漏洞</title>
+      <link href="/2019/05/22/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E1/"/>
+      <url>/2019/05/22/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E1/</url>
       
-        <content type="html"><![CDATA[<p>����ִ��©����</p><pre><code>ԭ����û�кܺõĹ����û����������ݣ�    ����ִ��©��  ����ִ�ű������ӵ���ϵͳ����-----PHP�����н϶����ࣺ        ����ִ��©����ֱ�ӵ���ϵͳ����    ���ִ��©����java��ܡ�thinKPHP��ܣ������������ʽ��������������Ҫʹ��ϵͳִ������          ��ִ�������֮ǰ���������ù��ˣ�ת��          ȷ��ʹ�õĺ�����ָ���ĺ���֮һ           ��PHP������˵��������ȫ���Ƶ�Σ�պ�����Ҫʹ��</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>命令执行漏洞：</p><pre><code>原理：没有很好的过滤用户的输入数据，    代码执行漏洞  ：靠执脚本代码间接调用系统命令-----PHP函数中较多种类：        命令执行漏洞：直接调用系统命令    框架执行漏洞：java框架。thinKPHP框架（掌握正则表达式）防范：尽量不要使用系统执行命令          在执行命令函数之前，变量做好过滤，转义          确保使用的函数是指定的函数之一           对PHP语言来说，不能完全控制的危险函数不要使用</code></pre>]]></content>
       
       
       
         <tags>
             
-            <tag> ����ִ��©�� </tag>
+            <tag> 命令执行漏洞 </tag>
             
         </tags>
       
@@ -219,6 +200,25 @@
     
     
     <entry>
+      <title>刘傻仪~~~~~~</title>
+      <link href="/2019/05/20/520/"/>
+      <url>/2019/05/20/520/</url>
+      
+        <content type="html"><![CDATA[<p>—————-~——-<br>—————-~——-<br> 今天是5，20</p><p> 单身狗！</p><p> 祝你早日脱单哈哈哈~~</p><p>—————-~——-<br>—————-~——-</p><p>5，21</p><p> 我今天心情不好，你完了！</p><p>—————-~——-<br>—————-~——-</p><p>5.23</p><p>发现你还是一样的傻，<br>什么时候能聪明一点啊。。。。<br>追求更高的层次</p><p>—————-~——-<br>—————-~——-</p><p>5.24</p><p>多读书！多社交！<br>别老是刷剧，刷微博</p><pre><code>-----------哆啦A梦</code></pre><div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=393685&auto=1&height=66"></iframe></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 心情 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>metaspolit基础一</title>
       <link href="/2019/05/20/metasploit/"/>
       <url>/2019/05/20/metasploit/</url>
@@ -230,25 +230,6 @@
         <tags>
             
             <tag> mataspolit 渗透测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>刘傻仪~~~~~~</title>
-      <link href="/2019/05/20/520/"/>
-      <url>/2019/05/20/520/</url>
-      
-        <content type="html"><![CDATA[<p> 今天是5，21</p><p> 我今天心情不好，你完了！</p><p>———–哆啦A梦</p><div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=393685&auto=1&height=66"></iframe></div>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 心情 </tag>
             
         </tags>
       
